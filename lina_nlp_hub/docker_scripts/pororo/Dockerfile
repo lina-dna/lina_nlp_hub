@@ -10,10 +10,11 @@ RUN curl -sL https://deb.nodesource.com/setup_12.x  | bash -
 RUN apt-get -y install nodejs
 RUN npm install
 
-RUN pip install tornado pytorch-lightning pandas scikit-learn streamlit boto3 gensim
+RUN pip install tornado pytorch-lightning pandas scikit-learn streamlit boto3 gensim python-mecab-ko g2pk
 RUN pip install jupyterlab
-RUN pip install pororo jupyter-tensorboard papermill elyra
-RUN jupyter labextension install jupyterlab_tensorboard jupyterlab-system-monitor elyra-pipeline-editor-extension elyra-python-editor-extension
+RUN pip install pororo jupyter-tensorboard papermill elyra elyra-pipeline-editor-extension elyra-code-snippet-extension elyra-python-editor-extension
+RUN jupyter lab build
+RUN jupyter labextension install jupyterlab-system-monitor
 
 #load pre-trained model in pororo
 COPY download_all_pororo_models.py ./download_all_pororo_models.py

@@ -6,7 +6,7 @@ paraphrase_identification = Pororo(task="para", lang="ko")
 review_scoring = Pororo(task="review", lang="ko")
 semantic_textual_similarity = Pororo(task="similarity", lang="ko")
 sentence_embedding = Pororo(task="sentence_embedding", lang="ko")
-sentiment_analysis = Pororo(task="seniment", model="brainbert.base.ko.shopping", lang="ko")
+sentiment_analysis = Pororo(task="sentiment", model="brainbert.base.ko.shopping", lang="ko")
 topic_classification = Pororo(task="zero-topic", lang="ko")
 
 #sequential_labeling
