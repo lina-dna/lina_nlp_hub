@@ -1,0 +1,4 @@
+fastapi
+streamlit
+
+elyra>=2.0.1
