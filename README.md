@@ -8,3 +8,8 @@
 
 ## How to deploy each NLP model inference service effectively
 ![deployment view](img/deployment_view_design.png)
+
+## Reference
+[pororo](https://github.com/kakaobrain/pororo)
+[streamlit](https://github.com/streamlit/streamlit)
+
