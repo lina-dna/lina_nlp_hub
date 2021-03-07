@@ -18,5 +18,5 @@ COPY streamlit_app.py /workspace/streamlit_app.py
 RUN python -c "from pororo import Pororo; sa = Pororo(task='sentiment', model='brainbert.base.ko.shopping', lang='ko');"
 
 EXPOSE 8000 8001
-CMD ["uvicorn", "inferencer:app", "--reload", "--host=0.0.0.0", "--port=8000", "&", \
-	"streamlit", "run", "streamlit_app.py", "--server.port", "8001"]
+#CMD ["uvicorn", "inferencer:app", "--reload", "--host=0.0.0.0", "--port=8000", ";", "streamlit", "run", "streamlit_app.py", "--server.port", "8001"]
+CMD uvicorn inferencer:app --reload --host=0.0.0.0 --port=8000 & streamlit run streamlit_app.py --server.port 8001
