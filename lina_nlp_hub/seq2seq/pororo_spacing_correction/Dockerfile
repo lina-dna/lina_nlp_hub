@@ -10,9 +10,9 @@ RUN curl -sL https://deb.nodesource.com/setup_12.x  | bash -
 RUN apt-get -y install nodejs
 RUN npm install
 
-RUN pip install tornado pytorch-lightning pandas scikit-learn streamlit boto3 gensim python-mecab-ko g2pk
+RUN pip install tornado pandas scikit-learn streamlit boto3
 RUN pip install jupyterlab
-RUN pip install pororo jupyter-tensorboard papermill elyra elyra-pipeline-editor-extension elyra-code-snippet-extension elyra-python-editor-extension
+RUN pip install pororo jupyter-tensorboard papermill
 RUN jupyter lab build
 RUN jupyter labextension install jupyterlab-system-monitor
 
