@@ -1,4 +1,7 @@
 fastapi
 streamlit
+pytorch-lightning
+transformers
+tokenizers
 
 elyra>=2.0.1
