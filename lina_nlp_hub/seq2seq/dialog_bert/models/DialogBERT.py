@@ -33,12 +33,13 @@ class DialogBERTModel(nn.Module):
         self.decoder_config.add_cross_attention = True
         self.decoder = BertLMHeadModel(self.decoder_config)
 
-    def forward(self, context):
-        # utterance encoding
-        # context encoding
+    def forward(self, context, response):
+        ## loss for response generation
+
 
         ## loss for dialog flow
+
         ## loss for context order prediction
-        ## train decoder
+
 
 

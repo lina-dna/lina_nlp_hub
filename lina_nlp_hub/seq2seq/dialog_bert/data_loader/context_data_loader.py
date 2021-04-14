@@ -1,5 +1,7 @@
 from torch.utils.data import Dataset
 
+import torch
+
 import os, sys
 import dask.dataframe as dd
 
@@ -84,6 +86,8 @@ class ContextDataset(Dataset):
         # padding context & response
         current_context = self.contexts[offset]
         current_response = self.responses[offset]
+
+        return torch.LongTensor(current_context), torch.LongTensor(current_response)
 
     def __len__(self):
         return len(self.context)
